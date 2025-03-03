@@ -1,0 +1,12 @@
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\bin\Debug\net8.0\CarParkingSystem.Core.deps.json
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\bin\Debug\net8.0\CarParkingSystem.Core.dll
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\bin\Debug\net8.0\CarParkingSystem.Core.pdb
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.csproj.AssemblyReference.cache
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.AssemblyInfoInputs.cache
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.AssemblyInfo.cs
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.csproj.CoreCompileInputs.cache
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.dll
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\refint\CarParkingSystem.Core.dll
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\CarParkingSystem.Core.pdb
+C:\Users\Nalan\source\repos\CarParkingSystem\Backend\CarParkingSystem\CarParkingSystem.Application\obj\Debug\net8.0\ref\CarParkingSystem.Core.dll

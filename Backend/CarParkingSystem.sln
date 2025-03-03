@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarParkingSystem.Core", "CarParkingSystem\CarParkingSystem.Application\CarParkingSystem.Core.csproj", "{A2AAFD89-92E0-320D-00E4-11E98307DE76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarParkingSystem.Infrastructure", "CarParkingSystem\CarParkingSystem.Infrastructure\CarParkingSystem.Infrastructure.csproj", "{E17FB411-4E35-AB6B-D700-782FC22413CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarParkingSystem.WebApi", "CarParkingSystem\CarParkingSystem.WebApi\CarParkingSystem.WebApi.csproj", "{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2AAFD89-92E0-320D-00E4-11E98307DE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AAFD89-92E0-320D-00E4-11E98307DE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AAFD89-92E0-320D-00E4-11E98307DE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AAFD89-92E0-320D-00E4-11E98307DE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17FB411-4E35-AB6B-D700-782FC22413CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17FB411-4E35-AB6B-D700-782FC22413CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17FB411-4E35-AB6B-D700-782FC22413CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17FB411-4E35-AB6B-D700-782FC22413CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0C06194-A47B-44AB-966A-FCF5130A61AF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E3ED7FF-7F68-45B9-A284-85DCD5299DE6}|CleanArchitecture\\CleanArchitecture.WebApi\\CleanArchitecture.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\cleanarchitecture\\cleanarchitecture.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E3ED7FF-7F68-45B9-A284-85DCD5299DE6}|CleanArchitecture\\CleanArchitecture.WebApi\\CleanArchitecture.WebApi.csproj|solutionrelative:cleanarchitecture\\cleanarchitecture.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "RelativeToolTip": "CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-27T19:04:00.894Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E17FB411-4E35-AB6B-D700-782FC22413CC}|CarParkingSystem\\CarParkingSystem.Infrastructure\\CarParkingSystem.Infrastructure.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.infrastructure\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E17FB411-4E35-AB6B-D700-782FC22413CC}|CarParkingSystem\\CarParkingSystem.Infrastructure\\CarParkingSystem.Infrastructure.csproj|solutionrelative:carparkingsystem\\carparkingsystem.infrastructure\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\parkrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\parkrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\parkareacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\parkareacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\dtos\\account\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\dtos\\account\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\features\\parkareas\\commands\\updateparkarea\\updateparkareacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\features\\parkareas\\commands\\updateparkarea\\updateparkareacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\features\\parkrecords\\commands\\createparkrecord\\createparkrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\features\\parkrecords\\commands\\createparkrecord\\createparkrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\features\\parkareas\\commands\\createparkarea\\createparkareacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\features\\parkareas\\commands\\createparkarea\\createparkareacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\enums\\parkrecordstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\enums\\parkrecordstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\enums\\parkareastatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\enums\\parkareastatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\features\\parkrecords\\commands\\createparkrecord\\createparkrecordscommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\features\\parkrecords\\commands\\createparkrecord\\createparkrecordscommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\entities\\parkrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\entities\\parkrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|c:\\users\\nalan\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.application\\entities\\parkarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AAFD89-92E0-320D-00E4-11E98307DE76}|CarParkingSystem\\CarParkingSystem.Application\\CarParkingSystem.Core.csproj|solutionrelative:carparkingsystem\\carparkingsystem.application\\entities\\parkarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwDUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T18:58:30.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T18:31:42.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T18:31:09.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.json",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T18:30:52.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAiwEMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T18:23:39.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\DTOs\\Account\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\DTOs\\Account\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\DTOs\\Account\\RegisterRequest.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\DTOs\\Account\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T18:18:01.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIAzwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T17:46:44.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ParkAreaController.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T17:44:33.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateParkAreaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\UpdateParkArea\\UpdateParkAreaCommand.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\UpdateParkArea\\UpdateParkAreaCommand.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\UpdateParkArea\\UpdateParkAreaCommand.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\UpdateParkArea\\UpdateParkAreaCommand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T14:16:22.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ParkAreaStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkAreaStatus.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkAreaStatus.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkAreaStatus.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkAreaStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T14:13:41.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ParkRecordStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkRecordStatus.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkRecordStatus.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkRecordStatus.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Enums\\ParkRecordStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T14:13:39.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateParkRecordCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordCommand.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordCommand.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordCommand.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T14:06:45.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ParkArea.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkArea.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkArea.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkArea.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkArea.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:53:11.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ParkRecord.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkRecord.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkRecord.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkRecord.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Entities\\ParkRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:53:08.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ParkRecordController.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkRecordController.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkRecordController.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkRecordController.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkRecordController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwB0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:27:11.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateParkRecordsCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordsCommandValidator.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordsCommandValidator.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordsCommandValidator.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkRecords\\Commands\\CreateParkRecord\\CreateParkRecordsCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:22:17.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateParkAreaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\CreateParkArea\\CreateParkAreaCommand.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\CreateParkArea\\CreateParkAreaCommand.cs",
+              "ToolTip": "C:\\Users\\Nalan\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\CreateParkArea\\CreateParkAreaCommand.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Application\\Features\\ParkAreas\\Commands\\CreateParkArea\\CreateParkAreaCommand.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:21:45.183Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
