@@ -2,13 +2,10 @@ import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { theme } from '../../../theme/theme';
 import Header from '../../../../shared/Header';
-import useNotifications from '../../notifications/hooks/useNotifications'
-import NotificationCardComponent from '../../notifications/components/NotificationCardComponent';
 
 const ParkingHistoriesScreen = ({ navigation }) => {
-  const { notifications, loading, error } = useNotifications();
 
-  if (loading) {
+  if (true) {
     return <Text style={styles.loadingText}>Loading...</Text>;
   }
 
@@ -17,7 +14,7 @@ const ParkingHistoriesScreen = ({ navigation }) => {
   };
 
   const renderItem = ({ item }) => (
-    <NotificationCardComponent notification={item} onPress={handlePress} />
+    console.log()
   );
 
   return (

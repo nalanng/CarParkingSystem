@@ -17,7 +17,6 @@ namespace CarParkingSystem.WebApi.Controllers.v1
     {
 
         [HttpGet]
-        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PagedResponse<IEnumerable<GetAllParkAreasViewModel>>))]
         public async Task<PagedResponse<IEnumerable<GetAllParkAreasViewModel>>> Get([FromQuery] GetAllParkAreasParameter filter)
         {

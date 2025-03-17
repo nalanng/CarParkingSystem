@@ -1,9 +1,5 @@
-export const API_BASE_URL = 'https://10f9-188-119-27-157.ngrok-free.app/api/v1';
-export const ACCOUNT_BASE_URL = 'https://10f9-188-119-27-157.ngrok-free.app/api/Account';
-
-export const announcement_endpoints = {
-    announcement: `${API_BASE_URL}/Announcement`  
-}
+export const API_BASE_URL = 'https://d41e-188-119-36-242.ngrok-free.app/api/v1';
+export const ACCOUNT_BASE_URL = 'https://d41e-188-119-36-242.ngrok-free.app/api/Account';
 
 export const lecture_endpoints = {
     courseSchedule: `${API_BASE_URL}/Lecture/Lecturer`
@@ -19,3 +15,7 @@ export const account_endpoints = {
   resetPassword: `${ACCOUNT_BASE_URL}/reset-password`,
   register: `${ACCOUNT_BASE_URL}/register`,
 }  
+
+export const parkArea_endpoints = {
+  getAllParkAreas: `${API_BASE_URL}/ParkArea`
+}

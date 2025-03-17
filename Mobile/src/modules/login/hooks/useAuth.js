@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { account_endpoints } from '../../../../config';  
 import StorageService from '../../../services/StorageService';  
-import { Roles } from '../../../utils/enums/Roles';
 
 const useAuth = () => {
   const [data, setData] = useState(null);
@@ -22,7 +21,6 @@ const useAuth = () => {
       });
 
       const result = response.data;
-      console.log(result)
 
       if (result.succeeded) {
         await StorageService.storeItem('userToken', result.data.jwToken); 

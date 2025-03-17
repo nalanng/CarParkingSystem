@@ -1,31 +1,53 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, TouchableOpacity  } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { useNavigation } from "@react-navigation/native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { theme } from "../../../theme/theme";
-import NotificationsScreen from "../../notifications/screens/NotificationsScreen";
+import QRScannerScreen from "../../qrScanner/screens/QRScannerScreen";
 import ProfileScreen from "../../profile/screens/ProfileScreen";
 import ParkingHistoriesScreen from "../../parkingHistories/screens/ParkingHistoriesScreen";
+import useParkAreas from '../hooks/useParkAreas'
+import { ActivityIndicator } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 function CustomHomeScreen() {
-  const navigation = useNavigation();
+  const { parkingSpots, loading, error, refetch } = useParkAreas();
+
+  const getParkingIcon = (status) => {
+    if (status === 1) {
+      return <FontAwesome5 name="car" size={70} color="red" />;
+    }
+    return <FontAwesome5 name="car-side" size={70} color="gray" />;
+  };
 
   return (
-    <View style={styles.container}>
+  <View style={styles.container}>
     <View style={styles.header}>
-      <Text style={styles.headerText}>
-        Car Parking
-      </Text>
+      <Text style={styles.headerText}>Car Parking</Text>
     </View>
 
     <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Home Screen</Text>
+      {loading ? (
+        <ActivityIndicator size="large" color={theme.colors.primary} />
+      ) : error ? (
+        <Text style={{ color: "red" }}>Error loading parking spots</Text>
+      ) : (
+        <View style={styles.parkingContainer}>
+          {parkingSpots.map((spot) => (
+            <TouchableOpacity key={spot.id} style={styles.parkingBox}>
+              {getParkingIcon(spot.status)}
+              <Text style={styles.statusText}>
+                {spot.status === 0 ? "Empty" : "Full"}
+              </Text>
+              <Text>{spot.location}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      )}
     </View>
   </View>
-  );
+);
 }
 
 export default function HomeScreen() {
@@ -35,7 +57,7 @@ export default function HomeScreen() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
           if (route.name === "Home") iconName = "home";
-          else if (route.name === "Notifications") iconName = "bell";
+          else if (route.name === "QR Scanner") iconName = "camera";
           else if (route.name === "Parking History") iconName = "file-alt";
           else if (route.name === "Profile") iconName = "user-circle";
 
@@ -47,8 +69,8 @@ export default function HomeScreen() {
       })}
     >
       <Tab.Screen name="Home" component={CustomHomeScreen} />
+      <Tab.Screen name="QR Scanner" component={QRScannerScreen} />
       <Tab.Screen name="Parking History" component={ParkingHistoriesScreen} />
-      <Tab.Screen name="Notifications" component={NotificationsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
@@ -76,9 +98,36 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: theme.colors.background,
   },
-  screenText: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: theme.colors.primary,
+  carImage: {
+    width: 60,
+    height: 60,
+    marginBottom: 8,
   },
+  parkingContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 10,
+    marginTop: 20,
+  },
+  parkingBox: {
+    width: 240,
+    height: 200,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 5,
+  },
+  statusText: {
+    marginTop: 8,
+    fontWeight: "bold",
+    fontSize: 16,
+    color: theme.colors.primary,
+  },  
 });

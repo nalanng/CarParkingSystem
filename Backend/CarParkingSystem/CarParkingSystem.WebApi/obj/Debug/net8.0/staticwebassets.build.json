@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "uBNb6Xlyn6UbWvj6S+TopSvAGb2zblM6Ezs4RR/9ahI=",
+  "Hash": "eDpbaHNhw0wwBRKRfLLbG4GwMv1O4SmuSa9g4wfgLAo=",
   "Source": "CarParkingSystem.WebApi",
   "BasePath": "_content/CarParkingSystem.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
