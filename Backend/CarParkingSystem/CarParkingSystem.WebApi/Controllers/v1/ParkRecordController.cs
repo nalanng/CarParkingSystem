@@ -23,10 +23,12 @@ namespace CarParkingSystem.WebApi.Controllers.v1
             return await Mediator.Send(new GetAllParkRecordsQuery() { PageSize = filter.PageSize, PageNumber = filter.PageNumber });
         }
 
-        [HttpGet("{userId}")]
+        [HttpGet("UserId")]
         [Authorize]
-        public async Task<IActionResult> Get(string userId)
+        public async Task<IActionResult> Get()
         {
+            var userId = User.FindFirst("uid")?.Value;
+
             return Ok(await Mediator.Send(new GetParkRecordsByUserIdQuery() { UserId = userId }));
         }
 
@@ -34,6 +36,9 @@ namespace CarParkingSystem.WebApi.Controllers.v1
         [Authorize]
         public async Task<IActionResult> Post(CreateParkRecordCommand command)
         {
+            var userId = User.FindFirst("uid")?.Value;
+            command.UserId = userId;
+
             var response = await Mediator.Send(command);
 
             if (!response.Succeeded)

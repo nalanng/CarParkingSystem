@@ -4,7 +4,8 @@ namespace CarParkingSystem.Core.Enums
     public enum ParkAreaStatus
     {
         Empty = 0,
-        Full = 1
+        Full = 1,
+        Waiting = 2
     }
 
 }

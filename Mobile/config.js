@@ -19,3 +19,8 @@ export const account_endpoints = {
 export const parkArea_endpoints = {
   getAllParkAreas: `${API_BASE_URL}/ParkArea`
 }
+
+export const parkRecords_endpoints = {
+  createParkRecord: `${API_BASE_URL}/ParkRecord`,
+  getParkRecords: `${API_BASE_URL}/ParkRecord/UserId`
+}

@@ -326,16 +326,11 @@
   {
     "ContainingType": "CarParkingSystem.WebApi.Controllers.v1.ParkRecordController",
     "Method": "Get",
-    "RelativePath": "api/v{version}/ParkRecord/{userId}",
+    "RelativePath": "api/v{version}/ParkRecord/UserId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      },
       {
         "Name": "version",
         "Type": "",

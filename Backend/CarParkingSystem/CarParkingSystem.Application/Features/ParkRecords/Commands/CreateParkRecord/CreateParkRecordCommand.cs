@@ -14,16 +14,23 @@ namespace CarParkingSystem.Core.Features.ParkRecords.Commands.CreateParkRecord
     public class CreateParkRecordCommand : IRequest<Response<int>>
     {
         public int LotId { get; set; }
+        public string UserId { get; set; }
 
         public class CreateParkAreaCommandHandler : IRequestHandler<CreateParkRecordCommand, Response<int>>
         {
             private readonly IParkRecordRepositoryAsync parkRecordRepository;
+            private readonly IParkAreaRepositoryAsync parkAreaRepository;
             private readonly IDateTimeService dateTimeService;
             private readonly IMapper mapper;
 
-            public CreateParkAreaCommandHandler(IParkRecordRepositoryAsync parkRecordRepository, IDateTimeService dateTimeService, IMapper mapper)
+            public CreateParkAreaCommandHandler(
+                IParkRecordRepositoryAsync parkRecordRepository,
+                IParkAreaRepositoryAsync parkAreaRepository,
+                IDateTimeService dateTimeService,
+                IMapper mapper)
             {
                 this.parkRecordRepository = parkRecordRepository;
+                this.parkAreaRepository = parkAreaRepository;
                 this.dateTimeService = dateTimeService;
                 this.mapper = mapper;
             }
@@ -32,7 +39,7 @@ namespace CarParkingSystem.Core.Features.ParkRecords.Commands.CreateParkRecord
             {
                 var parkRecord = new ParkRecord
                 {
-                    UserId = "92bd40df-d034-47e7-bf14-ca811b58710e", //default superadmin user id
+                    UserId = request.UserId,
                     LotId = request.LotId,
                     StartTime = this.dateTimeService.NowUtc,
                     Fee = 50,
@@ -42,6 +49,7 @@ namespace CarParkingSystem.Core.Features.ParkRecords.Commands.CreateParkRecord
                 try
                 {
                     await this.parkRecordRepository.AddAsync(parkRecord);
+                    await this.parkAreaRepository.UpdateParkAreaStatus(request.LotId, ParkAreaStatus.Full);
                     return new Response<int>(parkRecord.Id);
                 }
                 catch (Exception ex)

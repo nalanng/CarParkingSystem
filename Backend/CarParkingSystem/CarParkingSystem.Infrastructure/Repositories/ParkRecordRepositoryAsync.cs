@@ -5,6 +5,7 @@ using CarParkingSystem.Core.Interfaces.Repositories;
 using CarParkingSystem.Infrastructure.Contexts;
 using CarParkingSystem.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -36,9 +37,24 @@ namespace CarParkingSystem.Infrastructure.Repositories
                 UserId = userId,
                 StartTime = x.StartTime,
                 EndTime = x.EndTime,
-                Fee = x.Fee,
+                Fee = CalculateTotalFee(x.StartTime, x.EndTime, x.Fee),
                 StatusId = x.StatusId
             }).ToList();
         }
+
+        private decimal CalculateTotalFee(DateTime startTime, DateTime? endTime, decimal baseFee)
+        {
+            var hourlyRate = 100;
+
+            if (endTime == null)
+                return baseFee;
+
+            var duration = endTime.Value - startTime;
+            var totalHours = duration.TotalHours;
+            var additionalFee = Math.Ceiling((decimal)totalHours * hourlyRate);
+
+            return baseFee + additionalFee;
+        }
+
     }
 }

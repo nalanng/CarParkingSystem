@@ -16,7 +16,6 @@ import {
   ConfirmEmailScreen,
   ForgotPasswordScreen,
   ParkingHistoriesScreen,
-  QRScannerScreen
 } from "./src/modules";
 const Stack = createStackNavigator();
 
@@ -45,7 +44,6 @@ export default function App() {
          />
           <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen name="QRScannerScreen" component={QRScannerScreen} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
           <Stack.Screen name="ParkingHistoriesScreen" component={ParkingHistoriesScreen} />
           <Stack.Screen 
