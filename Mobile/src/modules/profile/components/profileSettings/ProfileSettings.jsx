@@ -41,14 +41,6 @@ const ProfileSettings = ({userInfo}) => {
           <Text style={styles.arrow}>▶</Text>
         </TouchableOpacity>
         <View style={styles.divider} />
-        <TouchableOpacity style={styles.listItem} onPress={() => navigation.navigate("ConfirmEmailScreen", {userInfo})}>
-          <View style={{flexDirection:'row'}}>
-            <Ionicons name="mail" size={16} color={theme.colors.black} />
-            <Text style={styles.listText}>{"Confirm Email"}</Text>
-          </View>
-          <Text style={styles.arrow}>▶</Text>
-        </TouchableOpacity>
-        <View style={styles.divider} />
         <TouchableOpacity style={styles.listItem} onPress={onPressLogout}>
           <View style={{flexDirection:'row'}}>
             <Ionicons name="log-out-outline" size={16} color={theme.colors.red} />

@@ -12,7 +12,6 @@ const useResetPassword = () => {
     setLoading(true);
     try {
       const body = { email, token, password, confirmPassword };
-      console.log(body)
       const response = await axios.post(account_endpoints.resetPassword, body, {
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,5 @@
 ﻿using CarParkingSystem.Core.Entities;
-using CarParkingSystem.Core.Features.ParkRecords.Queries.GetAllParkRecords;
+using CarParkingSystem.Core.Enums;
 using CarParkingSystem.Core.Features.ParkRecords.Queries.GetParkRecordsByUserId;
 using CarParkingSystem.Core.Interfaces.Repositories;
 using CarParkingSystem.Infrastructure.Contexts;
@@ -40,6 +40,18 @@ namespace CarParkingSystem.Infrastructure.Repositories
                 Fee = CalculateTotalFee(x.StartTime, x.EndTime, x.Fee),
                 StatusId = x.StatusId
             }).ToList();
+        }
+
+        public async Task StoppedRecord(int lotId)
+        {
+            var record = await parkRecords
+              .Where(x => x.LotId == lotId && x.StatusId == (int)ParkRecordStatus.Active)
+              .FirstOrDefaultAsync();
+
+            record.EndTime = DateTime.Now;
+            record.StatusId = (int)ParkRecordStatus.Pending_Payment;
+
+            parkRecords.Update(record);
         }
 
         private decimal CalculateTotalFee(DateTime startTime, DateTime? endTime, decimal baseFee)

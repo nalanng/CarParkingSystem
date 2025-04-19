@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { ACCOUNT_BASE_URL, account_endpoints } from '../../../../config';  
-import StorageService from '../../../services/StorageService';  
 
 const useRegister = () => {
   const [data, setData] = useState(null);
@@ -13,7 +12,6 @@ const useRegister = () => {
     setLoading(true);
     try {
       const body = { firstName, lastName, email, userName, password, confirmPassword };
-      console.log(account_endpoints.register)
       const response = await axios.post(account_endpoints.register, body, {
         headers: {
           'Content-Type': 'application/json',
@@ -23,7 +21,6 @@ const useRegister = () => {
 
       const result = response.data;
       if (result.succeeded) {
-        await StorageService.storeItem('userToken', result.data.jwToken); 
         setSucceeded(result.succeeded); 
         setData(result.data); 
       } else {

@@ -41,7 +41,7 @@ namespace CarParkingSystem.Core.Features.ParkRecords.Commands.CreateParkRecord
                 {
                     UserId = request.UserId,
                     LotId = request.LotId,
-                    StartTime = this.dateTimeService.NowUtc,
+                    StartTime = this.dateTimeService.Now,
                     Fee = 50,
                     StatusId = (int)ParkRecordStatus.Active
                 };

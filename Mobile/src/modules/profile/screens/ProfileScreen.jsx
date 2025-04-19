@@ -1,4 +1,5 @@
-import React from 'react';
+import {React, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 import { View, StyleSheet } from 'react-native';
 import { theme } from '../../../theme/theme';
 import Header from '../../../../shared/Header';
@@ -8,7 +9,14 @@ import useCurrentUser from '../hooks/useCurrentUser';
 
 const ProfileScreen = ({ navigation }) => {
 
-  const { userInfo } = useCurrentUser();  
+  const { userInfo, refetch } = useCurrentUser(); 
+  
+    useFocusEffect(
+      useCallback(() => {
+        refetch();
+      }, [refetch])
+    );
+
   return (
     <View style={styles.container}>
       <Header goBack={navigation.goBack} title={'Profile'} />

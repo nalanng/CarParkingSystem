@@ -59,7 +59,6 @@ const ChangePhoneScreen = () => {
   }
 
   const onPressButton = async () => {
-    console.log(formattedPhoneNumber)
     const result = await fetchSetPhoneNumber(formattedPhoneNumber);
       if (result.success) {
         setSuccessModalVisible(true);

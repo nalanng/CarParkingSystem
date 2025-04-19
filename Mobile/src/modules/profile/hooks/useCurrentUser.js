@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';  
 import { account_endpoints } from "../../../../config";
 import StorageService from '../../../services/StorageService';
@@ -8,31 +8,37 @@ const useCurrentUser = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchUserInfo = async () => {
-      try {
-        const token = await StorageService.getItem('userToken'); 
+  const fetchUserInfo = useCallback(async () => {
+    try {
+      const token = await StorageService.getItem('userToken'); 
 
-        const response = await axios.get(account_endpoints.currentUser, {
-          headers: {
-            'Authorization': `Bearer ${token}`,
-          }
-        });
-
-        if (response.data.succeeded) {
-          setUserInfo(response.data.data);  
+      const response = await axios.get(account_endpoints.currentUser, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
         }
-      } catch (err) {
-        setError('Error fetching notifications');
-      } finally {
-        setLoading(false);  
-      }
-    };
+      });
 
-    fetchUserInfo();
+      if (response.data.succeeded) {
+        setUserInfo(response.data.data);  
+      }
+    } catch (err) {
+      setError('Error fetching user info');
+    } finally {
+      setLoading(false);  
+    }
   }, []);
 
-  return { userInfo, loading, error };
+  useEffect(() => {
+    fetchUserInfo();
+  }, [fetchUserInfo]);
+
+  const refetch = () => {
+    setLoading(true);
+    setError(null); 
+    fetchUserInfo();
+  };
+
+  return { userInfo, loading, error, refetch };
 };
 
 export default useCurrentUser;

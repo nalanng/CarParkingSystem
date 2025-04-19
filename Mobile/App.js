@@ -13,9 +13,9 @@ import {
   ProfileScreen,
   ChangePasswordScreen,
   ChangePhoneScreen,
-  ConfirmEmailScreen,
   ForgotPasswordScreen,
   ParkingHistoriesScreen,
+  EmailConfirmationInfoScreen
 } from "./src/modules";
 const Stack = createStackNavigator();
 
@@ -64,15 +64,7 @@ export default function App() {
               cardStyle: { marginTop: 20, borderRadius: 20, overflow: 'hidden' }
             }} 
           />
-          <Stack.Screen 
-            name="ConfirmEmailScreen" 
-            component={ConfirmEmailScreen} 
-            options={{ 
-              presentation: 'modal', 
-              animationTypeForReplace: 'pop',
-              cardStyle: { marginTop: 20, borderRadius: 20, overflow: 'hidden' }
-            }} 
-          />
+          <Stack.Screen name="EmailConfirmationInfoScreen" component={EmailConfirmationInfoScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

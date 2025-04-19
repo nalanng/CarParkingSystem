@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';  
 import { parkRecords_endpoints } from "../../../../config";
 import StorageService from '../../../services/StorageService';
@@ -8,31 +8,32 @@ const useParkRecords = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchParkRecords = async () => {
-      try {
-        const token = await StorageService.getItem('userToken'); 
+  const fetchParkRecords = useCallback(async () => {
+    try {
+      setLoading(true);
+      const token = await StorageService.getItem('userToken'); 
 
-        const response = await axios.get(parkRecords_endpoints.getParkRecords, {
-          headers: {
-            'Authorization': `Bearer ${token}`,
-          }
-        });
-
-        if (response.data.succeeded) {
-          setParkRecords(response.data.data);  
+      const response = await axios.get(parkRecords_endpoints.getParkRecords, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
         }
-      } catch (err) {
-        setError('Error fetching notifications');
-      } finally {
-        setLoading(false);  
-      }
-    };
+      });
 
-    fetchParkRecords();
+      if (response.data.succeeded) {
+        setParkRecords(response.data.data);  
+      }
+    } catch (err) {
+      setError('Error fetching notifications');
+    } finally {
+      setLoading(false);  
+    }
   }, []);
 
-  return { parkRecords, loading, error };
+  useEffect(() => {
+    fetchParkRecords();
+  }, [fetchParkRecords]);
+
+  return { parkRecords, loading, error, refetch: fetchParkRecords };
 };
 
 export default useParkRecords;

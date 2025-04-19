@@ -7,5 +7,5 @@ export { default as HomeScreen } from "./home/screens/HomeScreen";
 export { default as ProfileScreen} from "./profile/screens/ProfileScreen"
 export { default as ChangePasswordScreen} from "./profile/screens/ChangePasswordScreen"
 export { default as ChangePhoneScreen} from "./profile/screens/ChangePhoneScreen"
-export { default as ConfirmEmailScreen} from "./profile/screens/ConfirmEmailScreen"
 export { default as ParkingHistoriesScreen} from "./parkingHistories/screens/ParkingHistoriesScreen"
+export { default as EmailConfirmationInfoScreen} from "./login/screens/EmailConfirmationInfoScreen";

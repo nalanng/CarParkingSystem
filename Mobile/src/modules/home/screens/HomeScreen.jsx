@@ -12,32 +12,31 @@ import { useSignalR } from "../../../SignalR/SignalR";
 const Tab = createBottomTabNavigator();
 
 function CustomHomeScreen() {
-  const { parkingSpots, loading, error } = useParkAreas();
-  const { data, succeeded, errors, recordLoading, fetchCreateParkRecord } = useCreateParkRecord();
+  const { parkingSlots, loading, error } = useParkAreas();
+  const { fetchCreateParkRecord } = useCreateParkRecord();
 
   const [modalVisible, setModalVisible] = useState(false);
-  const [selectedSpot, setSelectedSpot] = useState(null);
-  const [liveSpots, setLiveSpots] = useState([]);
+  const [selectedSlot, setSelectedSlot] = useState(null);
+  const [liveSlots, setLiveSlots] = useState([]);
 
   useEffect(() => {
-    if (parkingSpots?.length > 0) {
-      setLiveSpots(parkingSpots);
+    if (parkingSlots?.length > 0) {
+      setLiveSlots(parkingSlots);
     }
-  }, [parkingSpots]);
+  }, [parkingSlots]);
 
   useSignalR({
     onStatusUpdate: (data) => {
-      setLiveSpots(prev =>
-        prev.map(spot =>
-          spot.id === data.locationId ? { ...spot, status: data.status } : spot
+      setLiveSlots(prev =>
+        prev.map(slot =>
+          slot.id === data.locationId ? { ...slot, status: data.status } : slot
         )
       );
     },
     onStatusFullUpdate: (data) => {
-      console.log(data)
-      setLiveSpots(prev =>
-        prev.map(spot =>
-          spot.id === data ? { ...spot, status: 1 } : spot
+      setLiveSlots(prev =>
+        prev.map(slot =>
+          slot.id === data ? { ...slot, status: 1 } : slot
         )
       );
     }
@@ -52,17 +51,17 @@ function CustomHomeScreen() {
     return <FontAwesome5 name="car-side" size={70} color="orange" />;
   };
 
-  const handlePress = (spot) => {
-    if (spot.status === 2) {
-      setSelectedSpot(spot);
+  const handlePress = (slot) => {
+    if (slot.status === 2) {
+      setSelectedSlot(slot);
       setModalVisible(true);
     }
   };
 
   const handleConfirm = async () => {
-    if (selectedSpot) {
+    if (selectedSlot) {
       setModalVisible(false);
-      await fetchCreateParkRecord(selectedSpot.id);
+      await fetchCreateParkRecord(selectedSlot.id);
     }
   };
 
@@ -76,21 +75,21 @@ function CustomHomeScreen() {
         {loading ? (
           <ActivityIndicator size="large" color={theme.colors.primary} />
         ) : error ? (
-          <Text style={{ color: "red" }}>Error loading parking spots</Text>
+          <Text style={{ color: "red" }}>Error loading parking slots</Text>
         ) : (
           <View style={styles.parkingContainer}>
-            {liveSpots.map((spot) => (
+            {liveSlots.map((slot) => (
               <TouchableOpacity
-                key={spot.id}
+                key={slot.id}
                 style={styles.parkingBox}
-                disabled={spot.status !== 2}
-                onPress={() => handlePress(spot)}
+                disabled={slot.status !== 2}
+                onPress={() => handlePress(slot)}
               >
-                {getParkingIcon(spot.status)}
+                {getParkingIcon(slot.status)}
                 <Text style={styles.statusText}>
-                  {spot.status === 0 ? "Empty" : spot.status === 1 ? "Full" : "Waiting"}
+                  {slot.status === 0 ? "Empty" : slot.status === 1 ? "Full" : "Waiting"}
                 </Text>
-                <Text>{spot.location}</Text>
+                <Text>{slot.location}</Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -106,7 +105,7 @@ function CustomHomeScreen() {
         <View style={styles.modalBackground}>
           <View style={styles.modalContainer}>
             <Text style={styles.modalText}>
-              Do you want to claim this parking spot as your own? The fee will be charged to you. Do you accept?
+              Do you want to claim this parking slot as your own? The fee will be charged to you. Do you accept?
             </Text>
             <View style={styles.modalButtons}>
               <Button title="Yes" onPress={handleConfirm} />

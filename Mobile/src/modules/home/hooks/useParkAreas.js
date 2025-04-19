@@ -3,7 +3,7 @@ import axios from "axios";
 import { parkArea_endpoints } from "../../../../config"; 
 
 const useParkAreas = (pageNumber = 1, pageSize = 10) => {
-  const [parkingSpots, setParkingSpots] = useState([]);
+  const [parkingSlots, setParkingSlots] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ const useParkAreas = (pageNumber = 1, pageSize = 10) => {
         }
       });
 
-      setParkingSpots(response.data.data);
+      setParkingSlots(response.data.data);
       
     } catch (err) {
       console.error("Error fetching park areas:", err);
@@ -30,7 +30,7 @@ const useParkAreas = (pageNumber = 1, pageSize = 10) => {
     fetchParkingAreas();
   }, [pageNumber, pageSize]);
 
-  return { parkingSpots, loading, error, refetch: fetchParkingAreas };
+  return { parkingSlots, loading, error, refetch: fetchParkingAreas };
 };
 
 export default useParkAreas;

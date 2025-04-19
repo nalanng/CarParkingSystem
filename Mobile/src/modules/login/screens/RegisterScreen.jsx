@@ -64,7 +64,7 @@ const RegisterScreen = ({ navigation }) => {
     if (succeeded) {
       navigation.reset({
         index: 0,
-        routes: [{ name: "HomeScreen" }],
+        routes: [{ name: "EmailConfirmationInfoScreen" }],
       });
     }
     }, [succeeded, data, navigation]);

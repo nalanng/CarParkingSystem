@@ -10,6 +10,7 @@ import LoginLogo from "../components/LoginLogo";
 import Button from "../../../../shared/Button"; 
 import TextInput from "../../../../shared/TextInput"; 
 import useAuth from "../hooks/useAuth";  
+import BackButton from "../../../../shared/BackButton";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState({ value: "", error: "" });
@@ -41,6 +42,10 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <Background>
+      <BackButton goBack={() => navigation.reset({
+          index: 0, 
+          routes: [{ name: 'StartScreen' }], 
+          })} />
       <LoginLogo />
       <HeaderText>Hello</HeaderText>
       

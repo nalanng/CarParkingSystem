@@ -103,13 +103,7 @@ namespace CarParkingSystem.Infrastructure.Services
                     await _userManager.AddToRoleAsync(user, Roles.Basic.ToString());
                     var verificationUri = await SendVerificationEmail(user, origin);
 
-                    /*await _emailService.SendAsync(new Core.DTOs.Email.EmailRequest
-                    {
-                        From = _mailSettings.EmailFrom, 
-                        To = request.Email,
-                        Body = $"Please confirm your account by visiting this URL: <a href='{verificationUri}'>Confirm your account</a>",
-                        Subject = "Confirm Email"
-                    });*/
+                    await SendConfirmEmailAsync(user.Id, origin);
 
                     return new Response<string>(user.Id, message: $"User Registered. Please confirm your account by visiting this URL {verificationUri}");
                 }
