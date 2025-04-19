@@ -1,10 +1,9 @@
 {
   "expo": {
-    "name": "Mobile",
+    "name": "Car Parking System",
     "slug": "Mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "permissions": [
