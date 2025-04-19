@@ -7,6 +7,7 @@ import ProfileScreen from "../../profile/screens/ProfileScreen";
 import ParkingHistoriesScreen from "../../parkingHistories/screens/ParkingHistoriesScreen";
 import useParkAreas from '../hooks/useParkAreas'
 import useCreateParkRecord from "../hooks/useCreateParkRecord";
+import { useSignalR } from "../../../SignalR/SignalR";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,6 +17,31 @@ function CustomHomeScreen() {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedSpot, setSelectedSpot] = useState(null);
+  const [liveSpots, setLiveSpots] = useState([]);
+
+  useEffect(() => {
+    if (parkingSpots?.length > 0) {
+      setLiveSpots(parkingSpots);
+    }
+  }, [parkingSpots]);
+
+  useSignalR({
+    onStatusUpdate: (data) => {
+      setLiveSpots(prev =>
+        prev.map(spot =>
+          spot.id === data.locationId ? { ...spot, status: data.status } : spot
+        )
+      );
+    },
+    onStatusFullUpdate: (data) => {
+      console.log(data)
+      setLiveSpots(prev =>
+        prev.map(spot =>
+          spot.id === data ? { ...spot, status: 1 } : spot
+        )
+      );
+    }
+  });
 
   const getParkingIcon = (status) => {
     if (status === 1) {
@@ -35,8 +61,8 @@ function CustomHomeScreen() {
 
   const handleConfirm = async () => {
     if (selectedSpot) {
-      await fetchCreateParkRecord(selectedSpot.id);
       setModalVisible(false);
+      await fetchCreateParkRecord(selectedSpot.id);
     }
   };
 
@@ -53,11 +79,11 @@ function CustomHomeScreen() {
           <Text style={{ color: "red" }}>Error loading parking spots</Text>
         ) : (
           <View style={styles.parkingContainer}>
-            {parkingSpots.map((spot) => (
+            {liveSpots.map((spot) => (
               <TouchableOpacity
                 key={spot.id}
                 style={styles.parkingBox}
-                disabled={spot.status !== 2} // Eğer status 2 değilse tıklanamaz
+                disabled={spot.status !== 2}
                 onPress={() => handlePress(spot)}
               >
                 {getParkingIcon(spot.status)}
@@ -80,7 +106,7 @@ function CustomHomeScreen() {
         <View style={styles.modalBackground}>
           <View style={styles.modalContainer}>
             <Text style={styles.modalText}>
-            Do you want to claim this parking spot as your own? The fee will be charged to you. Do you accept?
+              Do you want to claim this parking spot as your own? The fee will be charged to you. Do you accept?
             </Text>
             <View style={styles.modalButtons}>
               <Button title="Yes" onPress={handleConfirm} />
@@ -92,6 +118,7 @@ function CustomHomeScreen() {
     </View>
   );
 }
+
 
 export default function HomeScreen() {
   return (

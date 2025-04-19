@@ -1,5 +1,6 @@
-export const API_BASE_URL = 'https://d41e-188-119-36-242.ngrok-free.app/api/v1';
-export const ACCOUNT_BASE_URL = 'https://d41e-188-119-36-242.ngrok-free.app/api/Account';
+export const API_BASE_URL = 'https://c570-176-220-240-223.ngrok-free.app/api/v1';
+export const ACCOUNT_BASE_URL = 'https://c570-176-220-240-223.ngrok-free.app/api/Account';
+export const SignalR_URL = 'https://c570-176-220-240-223.ngrok-free.app/distancehub'
 
 export const lecture_endpoints = {
     courseSchedule: `${API_BASE_URL}/Lecture/Lecturer`

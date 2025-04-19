@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("codewithmukesh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+f276fcd1751c42e554836e8e348820ff0f4482d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+9a1d44c467ac203cd86a1f393f9aaf7735fd64b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarParkingSystem.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarParkingSystem.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]

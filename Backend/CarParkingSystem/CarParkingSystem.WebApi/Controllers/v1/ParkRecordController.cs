@@ -1,12 +1,15 @@
-﻿using CarParkingSystem.Core.Features.ParkAreas.Commands.CreateParkArea;
-using CarParkingSystem.Core.Features.ParkRecords.Commands.CreateParkRecord;
+﻿using CarParkingSystem.Core.Features.ParkRecords.Commands.CreateParkRecord;
 using CarParkingSystem.Core.Features.ParkRecords.Commands.UpdateParkRecord;
 using CarParkingSystem.Core.Features.ParkRecords.Queries.GetAllParkRecords;
 using CarParkingSystem.Core.Features.ParkRecords.Queries.GetParkRecordsByUserId;
+using CarParkingSystem.Core.Interfaces;
 using CarParkingSystem.Core.Wrappers;
+using CarParkingSystem.Hubs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -14,6 +17,12 @@ namespace CarParkingSystem.WebApi.Controllers.v1
 {
     public class ParkRecordController : BaseApiController
     {
+        private readonly IHubContext<DistanceHub> hubContext;
+
+        public ParkRecordController(IHubContext<DistanceHub> hubContext)
+        {
+            this.hubContext = hubContext;
+        }
 
         [HttpGet]
         [Authorize]
@@ -45,6 +54,8 @@ namespace CarParkingSystem.WebApi.Controllers.v1
             {
                 return BadRequest(new { response.Message });
             }
+
+            await this.hubContext.Clients.All.SendAsync("ParkAreaFull", command.LotId);
 
             return Ok(response);
         }

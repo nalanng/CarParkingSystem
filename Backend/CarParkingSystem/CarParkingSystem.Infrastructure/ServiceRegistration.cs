@@ -98,6 +98,7 @@ namespace CarParkingSystem.Infrastructure
             services.AddTransient<IDateTimeService, DateTimeService>();
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IQRCodeService, QRCodeService>();
+            services.AddTransient<IDistanceHubService, DistanceHubService>();
 
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));

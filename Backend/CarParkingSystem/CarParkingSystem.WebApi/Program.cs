@@ -1,5 +1,6 @@
 using CarParkingSystem.Core;
 using CarParkingSystem.Core.Interfaces;
+using CarParkingSystem.Hubs;
 using CarParkingSystem.Infrastructure;
 using CarParkingSystem.Infrastructure.Models;
 using CarParkingSystem.WebApi.Extensions;
@@ -25,6 +26,7 @@ builder.Services.AddApplicationLayer();
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddSwaggerExtension();
 builder.Services.AddControllers();
+builder.Services.AddSignalR();
 builder.Services.AddApiVersioningExtension();
 builder.Services.AddHealthChecks();
 builder.Services.AddCors(options =>
@@ -61,6 +63,7 @@ app.UseHealthChecks("/health");
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
+    endpoints.MapHub<DistanceHub>("/distanceHub");
 });
 
 

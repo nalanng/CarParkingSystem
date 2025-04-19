@@ -13,8 +13,6 @@ const useCreateParkRecord = () => {
     setLoading(true);
     try {
       const body = { lotId };
-
-      console.log(lotId)
       const token = await StorageService.getItem('userToken'); 
       const response = await axios.post(parkRecords_endpoints.createParkRecord, body, {
         headers: {
