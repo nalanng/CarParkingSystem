@@ -1,4 +1,4 @@
-const ngrok_url = 'https://f138-188-119-36-189.ngrok-free.app';
+const ngrok_url = 'https://4047-176-220-240-223.ngrok-free.app';
 
 export const API_BASE_URL = `${ngrok_url}/api/v1`;
 export const ACCOUNT_BASE_URL = `${ngrok_url}/api/Account`;

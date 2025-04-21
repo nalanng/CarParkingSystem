@@ -170,11 +170,11 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     gap: 10,
-    marginTop: 20,
+    marginTop: 10,
   },
   parkingBox: {
     width: 240,
-    height: 200,
+    height: 180,
     backgroundColor: "#fff",
     borderRadius: 10,
     justifyContent: "center",

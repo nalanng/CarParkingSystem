@@ -21,7 +21,7 @@ namespace CarParkingSystem.Infrastructure.Services
 
         public async Task<UpdateParkAreaStatusResponce> UpdateParkAreaStatus(UpdateParkAreaStatusRequest distanceRequest)
         {
-            ParkAreaStatus status = distanceRequest.Distance < 2 ? ParkAreaStatus.Waiting : ParkAreaStatus.Empty;
+            ParkAreaStatus status = distanceRequest.Distance < 14 ? ParkAreaStatus.Waiting : ParkAreaStatus.Empty;
 
             await this.parkAreaRepositoryAsync.UpdateParkAreaStatus(distanceRequest.LocationId, status);
 

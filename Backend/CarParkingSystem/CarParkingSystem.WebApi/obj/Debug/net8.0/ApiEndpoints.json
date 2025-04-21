@@ -137,6 +137,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CarParkingSystem.WebApi.Controllers.v1.DistanceHubController",
+    "Method": "UpdateParkAreaStatus",
+    "RelativePath": "api/v{version}/DistanceHub",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateParkAreaStatusRequest",
+        "Type": "CarParkingSystem.Core.DTOs.Requests.UpdateParkAreaStatusRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarParkingSystem.WebApi.Controllers.v1.ParkAreaController",
     "Method": "Get",
     "RelativePath": "api/v{version}/ParkArea",

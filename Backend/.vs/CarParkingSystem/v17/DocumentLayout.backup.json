@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\csart2\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\distancehubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\distancehubcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\csart2\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|c:\\users\\csart2\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\parkareacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAA60F6E-89D2-DB93-779E-3E3FC6B0CEA4}|CarParkingSystem\\CarParkingSystem.WebApi\\CarParkingSystem.WebApi.csproj|solutionrelative:carparkingsystem\\carparkingsystem.webapi\\controllers\\v1\\parkareacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E17FB411-4E35-AB6B-D700-782FC22413CC}|CarParkingSystem\\CarParkingSystem.Infrastructure\\CarParkingSystem.Infrastructure.csproj|c:\\users\\csart2\\source\\repos\\carparkingsystem\\backend\\carparkingsystem\\carparkingsystem.infrastructure\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E17FB411-4E35-AB6B-D700-782FC22413CC}|CarParkingSystem\\CarParkingSystem.Infrastructure\\CarParkingSystem.Infrastructure.csproj|solutionrelative:carparkingsystem\\carparkingsystem.infrastructure\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,37 +34,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ParkAreaController.cs",
+              "DocumentMoniker": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "ToolTip": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\ParkAreaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T08:10:50.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T08:10:38.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DistanceHubController.cs",
+              "DocumentMoniker": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\DistanceHubController.cs",
+              "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\DistanceHubController.cs",
+              "ToolTip": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\DistanceHubController.cs",
+              "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\v1\\DistanceHubController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T08:09:58.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
               "ToolTip": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
               "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.Infrastructure\\Services\\AccountService.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAnwGkAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAewG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T19:54:08.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
               "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDEAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowBwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T19:52:21.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Csart2\\source\\repos\\CarParkingSystem\\Backend\\CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
@@ -60,8 +111,7 @@
               "RelativeToolTip": "CarParkingSystem\\CarParkingSystem.WebApi\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-19T19:27:31.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T19:27:31.266Z"
             }
           ]
         }

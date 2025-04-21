@@ -48,10 +48,13 @@ namespace CarParkingSystem.Infrastructure.Repositories
               .Where(x => x.LotId == lotId && x.StatusId == (int)ParkRecordStatus.Active)
               .FirstOrDefaultAsync();
 
+            if (record == null) return;
+
             record.EndTime = DateTime.Now;
             record.StatusId = (int)ParkRecordStatus.Pending_Payment;
 
-            parkRecords.Update(record);
+            await UpdateAsync(record);
+
         }
 
         private decimal CalculateTotalFee(DateTime startTime, DateTime? endTime, decimal baseFee)

@@ -123,14 +123,14 @@ const ParkingHistoriesScreen = ({ navigation }) => {
         Parking fee starts from 50₺. Additional 100₺ per hour. Total fee is calculated based on parking duration.
       </Text>
       <FlatList
-        data={parkRecords}
+        data={[...parkRecords].sort((a, b) => new Date(b.startTime) - new Date(a.startTime))}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
         contentContainerStyle={styles.listContent}
         ListEmptyComponent={
           <Text style={styles.emptyText}>No parking history.</Text>
-      }
-    />
+        }
+      />
     </View>
   );
 };

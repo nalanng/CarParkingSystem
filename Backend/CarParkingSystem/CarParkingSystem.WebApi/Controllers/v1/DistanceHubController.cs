@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace CarParkingSystem.WebApi.Controllers.v1
 {
-    public class DistanceHubController : Controller
+    [ApiVersion("1.0")]
+    public class DistanceHubController : BaseApiController
     {
         private readonly IDistanceHubService distanceHubService;
         private readonly IHubContext<DistanceHub> hubContext;
