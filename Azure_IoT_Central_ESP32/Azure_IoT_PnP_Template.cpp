@@ -16,7 +16,7 @@
 #include <Arduino.h>
 
 /* --- Defines --- */
-#define AZURE_PNP_MODEL_ID "dtmi:azureiot:devkit:freertos:Esp32AzureIotKit;1"
+#define AZURE_PNP_MODEL_ID "dtmi:carParkingSystem:HCSR04_6bh;1"
 
 #define SAMPLE_DEVICE_INFORMATION_NAME "deviceInformation"
 #define SAMPLE_MANUFACTURER_PROPERTY_NAME "manufacturer"
@@ -42,9 +42,6 @@
 #define TELEMETRY_PROP_NAME_DISTANCE2 "distance2"
 #define TELEMETRY_PROP_NAME_DISTANCE3 "distance3"
 
-static az_span COMMAND_NAME_TOGGLE_LED_1 = AZ_SPAN_FROM_STR("ToggleLed1");
-static az_span COMMAND_NAME_TOGGLE_LED_2 = AZ_SPAN_FROM_STR("ToggleLed2");
-static az_span COMMAND_NAME_DISPLAY_TEXT = AZ_SPAN_FROM_STR("DisplayText");
 #define COMMAND_RESPONSE_CODE_ACCEPTED 202
 #define COMMAND_RESPONSE_CODE_REJECTED 404
 
@@ -75,7 +72,7 @@ static az_span COMMAND_NAME_DISPLAY_TEXT = AZ_SPAN_FROM_STR("DisplayText");
 static uint8_t data_buffer[DATA_BUFFER_SIZE];
 static uint32_t telemetry_send_count = 0;
 
-static size_t telemetry_frequency_in_seconds = 10; // With default frequency of once in 10 seconds.
+static size_t telemetry_frequency_in_seconds = 2; // With default frequency of once in 10 seconds.
 static time_t last_telemetry_send_time = INDEFINITE_TIME;
 
 
@@ -212,6 +209,8 @@ static float measureDistance(int trigPin, int echoPin) {
   return duration * SOUND_SPEED / 2;
 }
 
+  String lastStatuses[3] = {"", "", ""};
+
 static int generate_telemetry_payload(
     uint8_t* payload_buffer,
     size_t payload_buffer_size,
@@ -222,7 +221,6 @@ static int generate_telemetry_payload(
   az_span payload_buffer_span = az_span_create(payload_buffer, payload_buffer_size);
   az_span json_span;
   float distance1, distance2, distance3;
-  String lastStatuses[3] = {"", "", ""};
 
   for (int i = 0; i < 3; i++) {
     float distance = measureDistance(trigPins[i], echoPins[i]);
