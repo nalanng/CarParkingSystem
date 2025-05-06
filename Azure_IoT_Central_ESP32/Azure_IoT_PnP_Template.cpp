@@ -15,6 +15,8 @@
 #include "system_configs.h"
 #include <Arduino.h>
 
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
 /* --- Defines --- */
 #define AZURE_PNP_MODEL_ID "dtmi:carParkingSystem:HCSR04_6bh;1"
 
@@ -72,9 +74,11 @@
 static uint8_t data_buffer[DATA_BUFFER_SIZE];
 static uint32_t telemetry_send_count = 0;
 
-static size_t telemetry_frequency_in_seconds = 2; // With default frequency of once in 10 seconds.
+static size_t telemetry_frequency_in_seconds = 1; // With default frequency of once in 10 seconds.
 static time_t last_telemetry_send_time = INDEFINITE_TIME;
 
+String lastStatuses[3] = {"", "", ""};
+bool send_telemetry = false;
 
 /* --- Function Prototypes --- */
 /* Please find the function implementations at the bottom of this file */
@@ -100,6 +104,18 @@ void azure_pnp_init() {
     pinMode(trigPins[i], OUTPUT);
     pinMode(echoPins[i], INPUT);
   }
+
+  if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    while (true);
+  }
+
+  display.display();
+  delay(2000);
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+
 }
 
 const az_span azure_pnp_get_model_id() { return AZ_SPAN_FROM_STR(AZURE_PNP_MODEL_ID); }
@@ -137,15 +153,26 @@ int azure_pnp_send_telemetry(azure_iot_t* azure_iot)
       return RESULT_ERROR;
     }
 
+    if (!send_telemetry)
+    {
+      LogInfo("No telemetry change detected; skipping telemetry send.");
+      send_telemetry = false; 
+      return RESULT_OK;
+    }
+
     if (azure_iot_send_telemetry(azure_iot, az_span_create(data_buffer, payload_size)) != 0)
     {
       LogError("Failed sending telemetry.");
+      send_telemetry = false;
       return RESULT_ERROR;
     }
+
+    send_telemetry = false;  // ✅ Başarılı gönderimden sonra sıfırla
   }
 
   return RESULT_OK;
 }
+
 
 int azure_pnp_send_device_info(azure_iot_t* azure_iot, uint32_t request_id)
 {
@@ -208,9 +235,6 @@ static float measureDistance(int trigPin, int echoPin) {
   long duration = pulseIn(echoPin, HIGH);
   return duration * SOUND_SPEED / 2;
 }
-
-  String lastStatuses[3] = {"", "", ""};
-
 static int generate_telemetry_payload(
     uint8_t* payload_buffer,
     size_t payload_buffer_size,
@@ -222,6 +246,8 @@ static int generate_telemetry_payload(
   az_span json_span;
   float distance1, distance2, distance3;
 
+  send_telemetry = false; 
+
   for (int i = 0; i < 3; i++) {
     float distance = measureDistance(trigPins[i], echoPins[i]);
 
@@ -231,14 +257,35 @@ static int generate_telemetry_payload(
 
     String currentStatus = (distance < 14) ? "full" : "empty";
 
-    Serial.print("Sensor ");
-    Serial.print(i + 1);
-    Serial.print(" - Distance (cm): ");
-    Serial.println(distance);
-
     if (currentStatus != lastStatuses[i]) {
-        lastStatuses[i] = currentStatus;
+      lastStatuses[i] = currentStatus;
+      send_telemetry = true;
     }
+  }
+
+  if (send_telemetry) {
+    display.clearDisplay();
+
+    display.setTextSize(1);
+    display.setCursor(0, 0);
+    display.print("Car Parking");
+
+    for (int i = 0; i < 3; i++) {
+      String currentStatus = lastStatuses[i];
+
+      display.setCursor(0, (i + 1) * 16);
+      display.setTextSize(2);
+      display.print("A");
+      display.print(i + 1);
+      display.print(": ");
+      display.print((currentStatus == "full") ? "FULL" : "EMPTY");
+    }
+
+    display.display();
+  }
+
+  if (!send_telemetry) {
+    return RESULT_OK;
   }
 
   rc = az_json_writer_init(&jw, payload_buffer_span, NULL);
@@ -249,23 +296,22 @@ static int generate_telemetry_payload(
 
   rc = az_json_writer_append_property_name(&jw, AZ_SPAN_FROM_STR(TELEMETRY_PROP_NAME_DISTANCE1));
   EXIT_IF_AZ_FAILED(
-      rc, RESULT_ERROR, "Failed adding temperature property name to telemetry payload.");
+      rc, RESULT_ERROR, "Failed adding distance1 property name to telemetry payload.");
   rc = az_json_writer_append_double(&jw, distance1, DOUBLE_DECIMAL_PLACE_DIGITS);
   EXIT_IF_AZ_FAILED(
       rc, RESULT_ERROR, "Failed adding distance1 property value to telemetry payload. ");
 
   rc = az_json_writer_append_property_name(&jw, AZ_SPAN_FROM_STR(TELEMETRY_PROP_NAME_DISTANCE2));
-  EXIT_IF_AZ_FAILED(rc, RESULT_ERROR, "Failed adding humidity property name to telemetry payload.");
+  EXIT_IF_AZ_FAILED(rc, RESULT_ERROR, "Failed adding distance2 property name to telemetry payload.");
   rc = az_json_writer_append_double(&jw, distance2, DOUBLE_DECIMAL_PLACE_DIGITS);
   EXIT_IF_AZ_FAILED(
       rc, RESULT_ERROR, "Failed adding distance2 property value to telemetry payload. ");
 
   rc = az_json_writer_append_property_name(&jw, AZ_SPAN_FROM_STR(TELEMETRY_PROP_NAME_DISTANCE3));
-  EXIT_IF_AZ_FAILED(rc, RESULT_ERROR, "Failed adding light property name to telemetry payload.");
+  EXIT_IF_AZ_FAILED(rc, RESULT_ERROR, "Failed adding distance3 property name to telemetry payload.");
   rc = az_json_writer_append_double(&jw, distance3, DOUBLE_DECIMAL_PLACE_DIGITS);
   EXIT_IF_AZ_FAILED(rc, RESULT_ERROR, "Failed adding distance3 property value to telemetry payload.");
 
-  
   rc = az_json_writer_append_end_object(&jw);
   EXIT_IF_AZ_FAILED(rc, RESULT_ERROR, "Failed closing telemetry json payload.");
 
@@ -282,7 +328,6 @@ static int generate_telemetry_payload(
 
   return RESULT_OK;
 }
-
 static int generate_device_info_payload(
     az_iot_hub_client const* hub_client,
     uint8_t* payload_buffer,
