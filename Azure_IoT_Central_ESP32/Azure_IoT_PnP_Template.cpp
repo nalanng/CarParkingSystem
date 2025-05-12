@@ -103,6 +103,9 @@ void azure_pnp_init() {
   for (int i = 0; i < 3; i++) {
     pinMode(trigPins[i], OUTPUT);
     pinMode(echoPins[i], INPUT);
+
+    pinMode(redPins[i], OUTPUT);
+    pinMode(greenPins[i], OUTPUT);
   }
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
@@ -257,11 +260,21 @@ static int generate_telemetry_payload(
 
     String currentStatus = (distance < 14) ? "full" : "empty";
 
+    // LED 
+    if (currentStatus == "full") {
+      digitalWrite(redPins[i], HIGH);
+      digitalWrite(greenPins[i], LOW);
+    } else {
+      digitalWrite(redPins[i], LOW);
+      digitalWrite(greenPins[i], HIGH);
+    }
+
     if (currentStatus != lastStatuses[i]) {
       lastStatuses[i] = currentStatus;
       send_telemetry = true;
     }
   }
+
 
   if (send_telemetry) {
     display.clearDisplay();

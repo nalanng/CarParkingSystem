@@ -13,3 +13,6 @@
 const int trigPins[3] = {5, 14, 26};
 const int echoPins[3] = {18, 27, 25};
 
+// RGB LED Pins
+const int redPins[3] = {33, 2, 13};
+const int greenPins[3] = {32, 4, 12};
