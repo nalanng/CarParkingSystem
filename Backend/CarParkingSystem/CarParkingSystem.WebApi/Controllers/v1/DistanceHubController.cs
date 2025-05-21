@@ -22,9 +22,12 @@ namespace CarParkingSystem.WebApi.Controllers.v1
         [HttpPost]
         public async Task<IActionResult> UpdateParkAreaStatus(UpdateParkAreaStatusRequest updateParkAreaStatusRequest)
         {
-            var responce = await this.distanceHubService.UpdateParkAreaStatus(updateParkAreaStatusRequest);
+            var responses = await this.distanceHubService.UpdateParkAreaStatus(updateParkAreaStatusRequest);
 
-            await this.hubContext.Clients.All.SendAsync("ParkAreaStatus", responce);
+            foreach (var response in responses)
+            {
+                await this.hubContext.Clients.All.SendAsync("ParkAreaStatus", response);
+            }
 
             return Ok();
         }

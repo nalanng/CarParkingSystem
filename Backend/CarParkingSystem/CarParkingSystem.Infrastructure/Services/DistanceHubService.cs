@@ -4,6 +4,7 @@ using CarParkingSystem.Core.DTOs.Responses;
 using CarParkingSystem.Core.Enums;
 using CarParkingSystem.Core.Interfaces;
 using CarParkingSystem.Core.Interfaces.Repositories;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CarParkingSystem.Infrastructure.Services
@@ -19,24 +20,38 @@ namespace CarParkingSystem.Infrastructure.Services
             this.parkRecordRepositoryAsync = parkRecordRepositoryAsync;
         }
 
-        public async Task<UpdateParkAreaStatusResponce> UpdateParkAreaStatus(UpdateParkAreaStatusRequest distanceRequest)
+        public async Task<List<UpdateParkAreaStatusResponce>> UpdateParkAreaStatus(UpdateParkAreaStatusRequest distanceRequest)
         {
-            ParkAreaStatus status = distanceRequest.Distance < 14 ? ParkAreaStatus.Waiting : ParkAreaStatus.Empty;
+            var responses = new List<UpdateParkAreaStatusResponce>();
 
-            await this.parkAreaRepositoryAsync.UpdateParkAreaStatus(distanceRequest.LocationId, status);
+            var distances = new[] { distanceRequest.Distance1, distanceRequest.Distance2, distanceRequest.Distance3 };
 
-            if(status == ParkAreaStatus.Empty)
+            for (int i = 0; i < distances.Length; i++)
             {
-                await this.parkRecordRepositoryAsync.StoppedRecord(distanceRequest.LocationId);
+                int locationId = i + 1;
+                double distance = distances[i];
+
+                ParkAreaStatus status = distance < 14 ? ParkAreaStatus.Waiting : ParkAreaStatus.Empty;
+
+                var result = await this.parkAreaRepositoryAsync.UpdateParkAreaStatus(locationId, status);
+
+                if (status == ParkAreaStatus.Empty)
+                {
+                    await this.parkRecordRepositoryAsync.StoppedRecord(locationId);
+                }
+
+                if(result)
+                {
+                    responses.Add(new UpdateParkAreaStatusResponce
+                    {
+                        LocationId = locationId,
+                        Status = status
+                    });
+                }
             }
 
-            var responce = new UpdateParkAreaStatusResponce
-            {
-                Status = status,
-                LocationId = distanceRequest.LocationId
-            };
-
-            return responce;
+            return responses;
         }
+
     }
 }

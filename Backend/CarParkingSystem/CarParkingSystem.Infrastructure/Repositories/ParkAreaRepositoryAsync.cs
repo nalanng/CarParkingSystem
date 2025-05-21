@@ -18,7 +18,7 @@ namespace CarParkingSystem.Infrastructure.Repositories
             parkAreas = dbContext.Set<ParkArea>();
         }
 
-        public async Task UpdateParkAreaStatus(int id, ParkAreaStatus newStatus)
+        public async Task<bool> UpdateParkAreaStatus(int id, ParkAreaStatus newStatus)
         {
             var area = await parkAreas
                 .SingleOrDefaultAsync(x => x.Id == id);
@@ -28,9 +28,14 @@ namespace CarParkingSystem.Infrastructure.Repositories
                 throw new EntityNotFoundException($"Parking area with ID {id} not found.", area);
             }
 
-            area.Status = newStatus;
+            if (area.Status != newStatus)
+            {
+                area.Status = newStatus;
+                await UpdateAsync(area);
+                return true;
+            }
 
-            await UpdateAsync(area);
+            return false;
         }
     }
 }

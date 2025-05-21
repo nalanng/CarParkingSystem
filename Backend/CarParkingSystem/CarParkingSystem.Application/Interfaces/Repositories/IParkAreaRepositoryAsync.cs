@@ -7,6 +7,6 @@ namespace CarParkingSystem.Core.Interfaces.Repositories
 {
     public interface IParkAreaRepositoryAsync : IGenericRepositoryAsync<ParkArea>
     {
-        Task UpdateParkAreaStatus(int id, ParkAreaStatus newStatus);
+        Task<bool> UpdateParkAreaStatus(int id, ParkAreaStatus newStatus);
     }
 }
