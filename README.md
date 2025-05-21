@@ -21,7 +21,7 @@ This project implements a **Smart Car Parking System** using IoT technologies. T
 
 ## System Architecture
 
-![System Architecture Diagram](./Documentations/Images/system-architecture.png)  
+![System Architecture Diagram](./Documentations/Images/parking_system_diagram.png)  
 *Figure: Overview of the system components and data flow.*
 
 Main components:
